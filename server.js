@@ -3,9 +3,9 @@
  *  
  * Student name: Krishna Ramlakhan
  * Student ID:   818583171 
- * Date:         Feb 3, 2023
+ * Date:         Feb 17, 2023
  *
- *  
+ *  Assignment 2
  **/
 import debug from 'debug';
 debug('assignment1');

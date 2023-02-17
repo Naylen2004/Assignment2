@@ -34,23 +34,24 @@ import { Secret, MongoURI } from '../config/index.js';
 
 // Import Routes
 import indexRouter from '../app/routes/index.js';
-import moviesRouter from '../app/routes/movies.js';
+import businessRouter from '../app/routes/business.js';
 import authRouter from '../app/routes/auth.js';
 
 // Complete DB Configuration
+//mongoose.connect(MongoURI);
+mongoose.set('strictQuery', true); // supressed DeprecationWaring message off
 mongoose.connect(MongoURI);
+
 const db = mongoose.connection;
 
 // Database Listeners
 db.on('open', () => console.log(`Connected to MongoDB, status code: `,db.readyState)); //** password now not vailable 
 db.on('error', () => console.log("Mongo Connection Error"));
 
-
 // Instantiat the expresss application
 const app = express();
 
 // Setup Express Middleware
-
 // EJS Setup
 app.set('views', path.join(_dirname, '/views'));
 app.set('view engine','ejs');
@@ -87,7 +88,7 @@ passport.deserializeUser(User.deserializeUser());
 
 // Use Routes 
 app.use('/',indexRouter);
-app.use('/', moviesRouter);
+app.use('/', businessRouter);
 app.use('/', authRouter);
 
 export default app;  // export app variable as default module 

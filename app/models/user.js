@@ -1,3 +1,11 @@
+/**
+ * File name:    index.js **  Controller 
+ * Student name: Krishna Ramlakhan
+ * Student ID:   818583171 
+ * Date:         Feb 17, 2023 
+ * Assignment 2
+ */
+
 import mongoose from 'mongoose';
 import passportLocalMongoose from 'passport-local-mongoose'; // can give any name
 

@@ -1,0 +1,56 @@
+<!--
+ **
+ * File name:    index.js **  Controller 
+ * Student name: Krishna Ramlakhan
+ * Student ID:   818583171 
+ * Date:         Feb 17, 2023 
+ * Assignment 2
+ * -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <input type="hidden" name="id" value="<%= business._id %>" >
+                <div class="form-group">
+                    <label for="nameTextField">Business Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Contact Name"
+                    name="name" 
+                    value="<%= business.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="authorTextField">Number</label>
+                    <input type="number" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter business number"
+                    name="number" 
+                    value="<%= business.number %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publishedTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter the business email"
+                    name="email" 
+                    value="<%= business.email %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/business-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>

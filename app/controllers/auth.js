@@ -1,13 +1,18 @@
+/**
+ * File name:    index.js **  Controller 
+ * Student name: Krishna Ramlakhan
+ * Student ID:   818583171 
+ * Date:         Feb 1  7, 2023 
+ * Assignment 2
+ */
+
 import express from 'express';
 import passport from 'passport';
 // User Model Information
 import User from '../models/user.js'; // import user model information
-
 // Import Display Name Utility for Authentication
-import {UserDisplayName} from '../utils/index.js';
-
+import  {UserDisplayName } from '../utils/index.js';
 // Display Functions 
-
 // Login 
 export function DisplayLoginPage(req, res, next){
     if(!req.user) {   // req not has unser info 
@@ -17,7 +22,7 @@ export function DisplayLoginPage(req, res, next){
                                     displayName: UserDisplayName(req)
                                      });  
     }
-    return res.redirect('/movie-list'); // already logged it, rediret to . . . 
+    return res.redirect('/business-list'); // already logged it, rediret to . . . 
 }
 // Registration 
 export function DisplayRegistrationPage(req, res,next) {
